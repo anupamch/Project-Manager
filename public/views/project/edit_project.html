@@ -1,0 +1,269 @@
+<div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Project</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Edit Project <small>Edit exiting project</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                   <div class="alert alert-{{message.type}}">{{message.msg}}</div>
+                    <br />
+                    <form id="add_project_frm" name="add_project_frm"  class="form-horizontal form-label-left" novalidate ng-submit="updateProject(add_project_frm)">
+                    <form id="add_project_frm" name="add_project_frm"  class="form-horizontal form-label-left" novalidate ng-submit="updateProject(add_project_frm)">
+                    <form id="add_project_frm" name="add_project_frm"  class="form-horizontal form-label-left" novalidate ng-submit="updateProject(add_project_frm)">
+                    <form id="add_project_frm" name="add_project_frm"  class="form-horizontal form-label-left" novalidate ng-submit="updateProject(add_project_frm)">
+                    <form id="add_project_frm" name="add_project_frm"  class="form-horizontal form-label-left" novalidate ng-submit="updateProject(add_project_frm)">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="project_name">Project Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="project_name" name="project_name" ng-model="project_info.name" required class="form-control col-md-7 col-xs-12" >
+                           <div ng-show="add_project_frm.$submitted || add_project_frm.project_name.$dirty"  ng-messages="add_project_frm.project_name.$error"  role="alert">
+                                <div ng-message="required" ng-show="add_project_frm.project_name.$error">This fiels is required</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="project_type">Project Type<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select name="project_type" id="project_type" class="form-control" ng-model="project_info.project_type_id" required>
+                                <option value="">--Select Project Type--</option>
+                                <option ng-repeat="n in projectService.projectType" value="{{n.id}}" ng-selected="n.id==project_info.project_type_id">{{n.projecttype}}</option>
+                          </select>
+                          <div ng-show="add_project_frm.$submitted || add_project_frm.project_type.$dirty"  ng-messages="add_project_frm.project_type.$error"  role="alert">
+                                <div ng-message="required" ng-show="add_project_frm.project_type.$invalid">This fiels is required</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="pro_des" class="control-label col-md-3 col-sm-3 col-xs-12">Project Description<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea id="pro_des" name="pro_des" ng-model="project_info.project_des" class="form-control" required></textarea>
+                          
+                          <div ng-show="add_project_frm.$submitted || add_project_frm.pro_des.$dirty"  ng-messages="add_project_frm.pro_des.$error"  role="alert">
+                                <div ng-message="required" ng-show="add_project_frm.pro_des.$invalid">This fiels is required</div>
+                               
+                            </div>
+                         
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Project Start Date</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="start_date" name="start_date" ng-model="project_info.start_time" class="date-picker  form-control col-md-7 col-xs-12" type="text"   bootstrap-datepicker >
+                          
+                          
+                         
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Project Price</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="project_price" name="project_price" ng-model="project_info.price" class="form-control col-md-7 col-xs-12" type="number" >
+                           <div ng-show="add_project_frm.$submitted || add_project_frm.project_price.$dirty"  ng-messages="add_project_frm.project_price.$error"  role="alert">
+                                <div ng-message="number" ng-show="add_project_frm.project_price.$invalid">Invalid Number</div>
+                               
+                            </div>
+                          
+                         
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Project Time Line</label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                         <label for="hourly_pay"><input type="checkbox" id="hourly_pay" value="Hourly pay" ng-model="project_info.hourly_pay" ng-click="hourlyPay()"> Hourly Pay</label>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12"  ng-show="non_hourly">
+                          <input id="pro_time" name="pro_time" ng-model="project_info.time" class="form-control col-md-7 col-xs-12" type="number" name="project_time_num"  placeholder="Time" min="0"  pattern="\d*">
+                          <div ng-show="add_project_frm.$submitted || add_project_frm.pro_time.$dirty"  ng-messages="add_project_frm.pro_time.$error"  role="alert">
+                                <div ng-message="number" ng-show="add_project_frm.pro_time.$invalid">Invalid Number</div>
+                               
+                            </div>
+                        </div>
+                         <div class="col-md-3 col-sm-6 col-xs-12" ng-show="non_hourly">
+                         <select name="time_unit" id="time_unit" class="form-control" ng-model="project_info.time_unit">
+                                <option value="">--Select Time Unit--</option>
+                                <option  value="hour">Hour</option>
+                                <option  value="day">Day</option>
+                          </select>
+                                                    
+                        </div>
+                        </div>
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Project Manager</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select name="time_unit" id="time_unit" class="form-control" ng-model="project_info.pm_id">
+                                <option value="">Select Project Manager{{project_info.pm_id}}</option>
+                                
+                                <option  value="{{user.id}}" ng-repeat="user in project_man" ng-selected="user.id==project_info.pm_id">{{user.fname}}&nbsp;{{user.lname}}({{user.id}})</option>
+                          </select>
+                          
+                          
+                         
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Developers</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <div>
+                            <div ng-repeat="n in dev_names" style="border:1px solid #C5E2E2; padding:2px; width:auto;display: inline-block; float:left; margin:5px;">
+                            {{n.fname}}&nbsp;{{n.lname}}&nbsp;
+                            <i class="fa fa-times" ng-click="unselectDeveloper(n.id,'dev')" style="cursor:pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-6 col-xs-12" >
+                          <select name="time_unit" id="time_unit" class="form-control" ng-change="newDeveloper('dev')" ng-model="selected_dev" ng-options="user as user.fname+'&nbsp;'+user.lname for user in developers">
+                               <option value="">Select Developer</option>
+                          </select>
+                          <div class="col-md-12 col-sm-6 col-xs-12">&nbsp;</div>
+                        </div>  
+                          
+                         
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">HTML Coder</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div>
+                            <div ng-repeat="n in htmlcoder_names" style="border:1px solid #C5E2E2; padding:2px; width:auto;display: inline-block; float:left; margin:5px;">
+                            {{n.fname}}&nbsp;{{n.lname}}&nbsp;
+                            <i class="fa fa-times" ng-click="unselectDeveloper(n.id,'html')" style="cursor:pointer;"></i>
+                            </div>
+                        </div>
+                          <div class="col-md-12 col-sm-6 col-xs-12">
+                         <select name="html_select" id="html_select" class="form-control" ng-change="newDeveloper('html')" ng-model="selected_html_dev" ng-options="user as user.fname+'&nbsp;'+user.lname for user in htmlcoders">
+                                <option value="">Select HTML Coder</option>
+                                
+                               
+                          </select>
+                          &nbsp;<i class="fa fa-cross red"></i>
+                          <div class="col-md-12 col-sm-6 col-xs-12">&nbsp;</div>
+                          </div>
+                          
+                         
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Designer</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12" >
+                        <div>
+                            <div ng-repeat="n in designer_names" style="border:1px solid #C5E2E2; padding:2px; width:auto;display: inline-block; float:left; margin:5px;">
+                            {{n.fname}}&nbsp;{{n.lname}}&nbsp;
+                            <i class="fa fa-times" ng-click="unselectDeveloper(n.id,'designer')" style="cursor:pointer;"></i>
+                            </div>
+                        </div>
+                          <div class="col-md-12 col-sm-6 col-xs-12">
+                          <select name="designer_select" id="designer_select" class="form-control" ng-change="newDeveloper('designer')" ng-model="selected_designer" ng-options="user as user.fname+'&nbsp;'+user.lname for user in designers">
+                                <option value="">Select Designer</option>
+                                
+                               
+                          </select>
+                          <div class="col-md-12 col-sm-6 col-xs-12">&nbsp;</div>
+                        </div>
+                        </div>
+                      </div> 
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">SEO</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div>
+                            <div ng-repeat="n in seo_names" style="border:1px solid #C5E2E2; padding:2px; width:auto;display: inline-block; float:left; margin:5px;">
+                            {{n.fname}}&nbsp;{{n.lname}}&nbsp;
+                            <i class="fa fa-times" ng-click="unselectDeveloper(n.id,'seo')" style="cursor:pointer;"></i>
+                            </div>
+                        </div>
+                         <div class="col-md-12 col-sm-6 col-xs-12">
+                         <select name="seo_select" id="seo_select" class="form-control" ng-change="newDeveloper('seo')" ng-model="selected_seo" ng-options="user as user.fname+'&nbsp;'+user.lname for user in seo">
+                                <option value="">Select Seo Employee</option>
+                                
+                                
+                          </select>
+                          <div class="col-md-12 col-sm-6 col-xs-12">&nbsp;</div>
+                          </div>
+                          
+                         
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Client</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select name="client" id="client" class="form-control" ng-model="project_info.client_id" >
+                                <option value="">Select Clients</option>
+                                
+                                <option  value="{{user.id}}" ng-repeat="user in clients" ng-selected="user.id==project_info.client_id">{{user.fname}}&nbsp;{{user.lname}}</option>
+                          </select>
+                          
+                          
+                         
+                        </div>
+                      </div>                                
+                      <div class="form-group">
+                        <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Upload Document</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <button class="btn btn-info" ngf-select="uploadFiles($files)" ng-model="files"  ngf-multiple="true"><i class="fa fa-upload"></i>&nbsp;Select</button>
+                          <br/>
+                          <div class="col-md-8 col-sm-6 col-xs-12" ng-repeat="file in filenames track by $index" style="background:#C8C9FD; margin:3px;">
+                             <div class="col-md-9 col-sm-6 col-xs-12" style="overflow:hidden;">{{file | textShorter}}</div> 
+                             <div class="col-md-3 col-sm-6 col-xs-12"><i class="fa fa-times" style="color:#F00; cursor:pointer; float:right;"  ng-click="removeFile($index,file,filenames.length)"></i></div>
+                          </div>
+                          
+                          
+                         
+                        </div>
+                      </div>
+                      
+                      
+                      
+                       
+                      
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="button" class="btn btn-primary"  ng-click="cancel()">Cancel</button>
+                          <button type="submit" class="btn btn-success">{{submit_title}}</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           
+          </div>

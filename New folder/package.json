@@ -1,0 +1,52 @@
+{
+  "name": "round_table",
+  "version": "1.0.0",
+  "description": "It is a project management web application",
+  "main": "server.js",
+  "bin": {
+    "round_table": "app.js"
+  },
+  "scripts": {
+    "test": "test_rt",
+    "start": "node server.js"
+  },
+  "author": "Anupam Chowdhury (anupamchowdhury0@gmail.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-ruby-sass": "^2.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "crypto": "*",
+    "express": "*",
+    "express-session": "^1.7.6",
+    "http": "*",
+    "mocha": "*",
+    "moment": "*",
+    "multer ": "*",
+    "mysql": "*",
+    "requireindex": "*",
+    "sequelize": "*",
+    "socket.io": "*",
+    "socketio-file-upload": "^0.4.6",
+    "socket.io-stream": "*",
+    "delivery": "*",
+    "unzip": "*",
+    "mime": "*",
+    "formidable": "*",
+    "fs.extra": "*",
+    "easyimage": "*"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-bootstrap-npm": "^0.14.3",
+    "angular-cookies": "^1.5.0",
+    "angular-smart-table-improved": "^0.5.0",
+    "angular-ui-router": "^1.0.0-beta.2",
+    "jsonwebtoken": "^7.1.9"
+  }
+}

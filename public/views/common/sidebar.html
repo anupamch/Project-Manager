@@ -1,0 +1,47 @@
+
+              <div class="menu_section">
+                <h3>&nbsp;&nbsp;</h3>
+                <ul class="nav side-menu" >
+                  <li ><a toggle-menu><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" ng-hide="true" ng-animate="'fade'">
+                      <li><a ui-sref="dashboard" ng-class="{active: $state.includes('dashboard')}">Dashboard</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li ><a toggle-menu><i class="fa fa-home"></i> Projects <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" ng-hide="true" ng-animate="'fade'">
+                      <li><a ui-sref="project" ng-class="{active: $state.includes('project')}">List</a></li>
+                      <li><a ui-sref="addproject" validate-view="1,6,7">Add Project</a></li>
+                     
+                    </ul>
+                  </li>
+                  <li validate-view="1"><a toggle-menu><i class="fa fa-home"></i> Users <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" ng-hide="true" ng-animate="'fade'">
+                      <li><a ui-sref="users" ng-class="{active: $state.includes('users')}">List</a></li>
+                      <li><a ui-sref="adduser">Add User</a></li>
+                     
+                    </ul>
+                  </li>
+                  
+                  <!--<li><a toggle-menu><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" ng-hide="true">
+                       <li><a href="#level1_1">Level One</a>
+                        <li><a toggle-menu>Level One<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu" ng-hide="true">
+                            <li class="sub_menu"><a href="level2.html">Level Two</a>
+                            </li>
+                            <li><a href="#level2_1">Level Two</a>
+                            </li>
+                            <li><a href="#level2_2">Level Two</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a href="#level1_2">Level One</a>
+                        </li>
+                    </ul>
+                  </li>    -->              
+                  
+                </ul>
+              </div>
+
+         

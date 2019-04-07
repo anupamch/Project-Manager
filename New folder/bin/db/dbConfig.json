@@ -1,0 +1,22 @@
+
+{
+      "dev": {
+        "driver": "mysql",
+        "user": "root",
+        "password":"",
+		"port":3306,
+        "database": "karma"
+    },
+
+    "test": {
+        "driver": "mysql",
+        "user": "root",
+        "database": "myapp_test"
+    },
+
+    "production": {
+        "driver": "mysql",
+        "user": "root",
+        "database": "myapp"
+    }
+}
