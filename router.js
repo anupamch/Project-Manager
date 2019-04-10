@@ -29,7 +29,7 @@ module.exports=function(appObj,db){
 
     app.get('/', function(req, res) {
 
-        res.sendFile(__dirname+'/app/index.html');
+        res.sendFile(__dirname+'/public/index.html');
 
     })
 
